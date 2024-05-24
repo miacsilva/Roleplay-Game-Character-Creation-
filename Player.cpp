@@ -10,7 +10,7 @@ Player::Player(string name, Race race,
 	this->magicPoints = magicPoints;
 }
 
-//---------------------- getters
+
 string Player::getName() const
 {
 	return name;
@@ -59,7 +59,6 @@ int Player::getMagicPoints() const
 	return magicPoints;
 }
 
-//----------------------- setters
 void Player::setName(string name)
 {
 	this->name = name;
