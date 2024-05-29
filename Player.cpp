@@ -2,8 +2,7 @@
 
 
 Player::Player(string name, Race race,
-	int hitPoints, int magicPoints)
-{
+	int hitPoints, int magicPoints){
 	this->name = name;
 	this->race = race;
 	this->hitPoints = hitPoints;
@@ -11,70 +10,45 @@ Player::Player(string name, Race race,
 }
 
 
-string Player::getName() const
-{
+string Player::getName() const{
 	return name;
 }
 
-Race Player::getRace() const
-{
+Race Player::getRace() const{
 	return race;
 }
 
-string Player::whatRace() const
-{
-	string result = "";
-
-	if (race == HUMAN)
-	{
-		result = "Human";
-	}
-	else if (race == ELF)
-	{
-		result = "Elf";
-	}
-	else if (race == DWARF)
-	{
-		result = "Dwarf";
-	}
-	else if (race == ORC)
-	{
-		result = "Orc";
-	}
-	else if (race == TROLL)
-	{
-		result = "Troll";
-	}
-
-	return result;
+string Player::whatRace() const {
+    switch (race) {
+        case HUMAN: return "Human";
+        case ELF: return "Elf";
+        case DWARF: return "Dwarf";
+        case ORC: return "Orc";
+        case TROLL: return "Troll";
+        default: return "Unknown";
+    }
 }
 
-int Player::getHitPoints() const
-{
+int Player::getHitPoints() const{
 	return hitPoints;
 }
 
-int Player::getMagicPoints() const
-{
+int Player::getMagicPoints() const{
 	return magicPoints;
 }
 
-void Player::setName(string name)
-{
+void Player::setName(string name){
 	this->name = name;
 }
 
-void Player::setRace(Race race)
-{
+void Player::setRace(Race race){
 	this->race = race;
 }
 
-void Player::setHitPoints(int hitPoints)
-{
+void Player::setHitPoints(int hitPoints){
 	this->hitPoints = hitPoints;
 }
 
-void Player::setMagicPoints(int magicPoints)
-{
+void Player::setMagicPoints(int magicPoints){
 	this->magicPoints = magicPoints;
 }
